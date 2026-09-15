@@ -3,3 +3,6 @@ Editor de código desenvolvido com Angular para praticar manipulação do DOM, c
 #
 O projeto foi desenvolvido como um ambiente de experimentação para aprimorar conhecimentos em Angular, manipulação do DOM, componentes e desenvolvimento de interfaces interativas.
 
+![Imagem](screenshot/angular1.jpg)
+
+
