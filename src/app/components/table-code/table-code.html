@@ -1,0 +1,53 @@
+<div class="h-[calc(100vh-52px)] bg-olive-900 p-2 flex gap-2">
+
+  <div class="w-3/4 bg-gray-200 rounded-lg shadow-inner overflow-hidden flex flex-col">
+    <mat-tab-group class="flex-grow" mat-stretch-tabs="false" animationDuration="0ms">
+      <div class="w-full md:w-2/3 flex flex-col h-full">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <img src="https://cdn.simpleicons.org/html5/E34F26" class="w-4 h-4 mr-2"> HTML
+          </ng-template>
+          <div class="h-[calc(100vh-160px)]">
+            <ngx-monaco-editor class="h-full w-full" [options]="htmlConfig" [(ngModel)]="htmlCode"></ngx-monaco-editor>
+          </div>
+        </mat-tab>
+      </div>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="https://cdn.simpleicons.org/html5/1572B6" class="w-4 h-4 mr-2"> CSS
+        </ng-template>
+        <div class="h-[calc(100vh-160px)]">
+          <ngx-monaco-editor class="h-full w-full" [options]="cssConfig" [(ngModel)]="cssCode"></ngx-monaco-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <img src="https://cdn.simpleicons.org/javascript/F7DF1E" class="w-4 h-4 mr-2"> JS
+        </ng-template>
+        <div class="h-[calc(100vh-160px)]">
+          <ngx-monaco-editor class="h-full w-full" [options]="jsConfig" [(ngModel)]="jsCode"></ngx-monaco-editor>
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+
+    
+      
+
+  </div>
+
+  <div class="w-1/4 bg-white rounded-lg shadow-2xl overflow-hidden border-2 border-olive-800">
+    <div class="bg-gray-100 p-2 text-xs font-bold text-gray-500 uppercase border-b flex justify-between items-center">
+  <span>Live Preview</span> 
+
+  <button (click)="renderizarPreview()"
+    class="bg-lime-700 hover:bg-lime-800 text-white rounded font-bold transition-all shadow-md cursor-pointer px-6 py-2 normal-case tracking-normal">
+    Rodar
+  </button>
+</div>
+    
+    <iframe #meuIframe class="w-full h-full bg-white"></iframe>
+  </div>
+
+</div>
